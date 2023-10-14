@@ -1,0 +1,1200 @@
+[    0.000000] kernel: Booting Linux on physical CPU 0x0000000000 [0x410fd4b0]
+[    0.000000] kernel: Linux version 6.4.13-sc8280xp-arm64 (armbian@next) (aarch64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #16 SMP PREEMPT Thu Aug 31 20:37:11 CST 2023
+[    0.000000] kernel: Machine model: Matebook E Go
+[    0.000000] kernel: efi: EFI v2.7 by Qualcomm Technologies, Inc.
+[    0.000000] kernel: efi: ACPI 2.0=0xffffd000 ESRT=0xfc0ae598 SMBIOS=0xffed1000 MEMATTR=0xfbf30098 TPMEventLog=0xec92e018 RNG=0xfff5b018 MEMRESERVE=0xf006f498 
+[    0.000000] kernel: random: crng init done
+[    0.000000] kernel: TPM Final Events table not present
+[    0.000000] kernel: esrt: Reserving ESRT space from 0x00000000fc0ae598 to 0x00000000fc0ae5d0.
+[    0.000000] kernel: Reserved memory: created CMA memory pool at 0x0000000878000000, size 128 MiB
+[    0.000000] kernel: OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] kernel: OF: reserved mem: 0x0000000878000000..0x000000087fffffff (131072 KiB) map reusable linux,cma
+[    0.000000] kernel: OF: reserved mem: 0x0000000080000000..0x000000008085ffff (8576 KiB) nomap non-reusable reserved-region@80000000
+[    0.000000] kernel: OF: reserved mem: 0x0000000080860000..0x000000008087ffff (128 KiB) nomap non-reusable cmd-db-region@80860000
+[    0.000000] kernel: OF: reserved mem: 0x0000000080880000..0x00000000808fffff (512 KiB) nomap non-reusable reserved-region@80880000
+[    0.000000] kernel: OF: reserved mem: 0x0000000080900000..0x0000000080afffff (2048 KiB) nomap non-reusable smem-region@80900000
+[    0.000000] kernel: OF: reserved mem: 0x0000000080b00000..0x0000000080bfffff (1024 KiB) nomap non-reusable reserved-region@80b00000
+[    0.000000] kernel: OF: reserved mem: 0x0000000083b00000..0x00000000851fffff (23552 KiB) nomap non-reusable reserved-region@83b00000
+[    0.000000] kernel: OF: reserved mem: 0x0000000085b00000..0x00000000866fffff (12288 KiB) nomap non-reusable reserved-region@85b00000
+[    0.000000] kernel: OF: reserved mem: 0x0000000086700000..0x0000000086bfffff (5120 KiB) nomap non-reusable pil_video_region@86700000
+[    0.000000] kernel: OF: reserved mem: 0x0000000086c00000..0x0000000088bfffff (32768 KiB) nomap non-reusable adsp-region@86c00000
+[    0.000000] kernel: OF: reserved mem: 0x000000008a100000..0x000000008befffff (30720 KiB) nomap non-reusable cdsp0-region@8a100000
+[    0.000000] kernel: OF: reserved mem: 0x000000008bf00000..0x000000008bf01fff (8 KiB) nomap non-reusable gpu-mem@8bf00000
+[    0.000000] kernel: OF: reserved mem: 0x000000008c600000..0x000000008e3fffff (30720 KiB) nomap non-reusable cdsp1-region@8c600000
+[    0.000000] kernel: OF: reserved mem: 0x00000000aeb00000..0x00000000c50fffff (366592 KiB) nomap non-reusable reserved-region@aeb00000
+[    0.000000] kernel: NUMA: No NUMA configuration found
+[    0.000000] kernel: NUMA: Faking a node at [mem 0x0000000080600000-0x000000087fffffff]
+[    0.000000] kernel: NUMA: NODE_DATA [mem 0x876085ac0-0x876087fff]
+[    0.000000] kernel: Zone ranges:
+[    0.000000] kernel:   DMA      [mem 0x0000000080600000-0x00000000ffffffff]
+[    0.000000] kernel:   DMA32    empty
+[    0.000000] kernel:   Normal   [mem 0x0000000100000000-0x000000087fffffff]
+[    0.000000] kernel: Movable zone start for each node
+[    0.000000] kernel: Early memory node ranges
+[    0.000000] kernel:   node   0: [mem 0x0000000080600000-0x00000000806fffff]
+[    0.000000] kernel:   node   0: [mem 0x0000000080880000-0x00000000808affff]
+[    0.000000] kernel:   node   0: [mem 0x00000000808c0000-0x00000000808effff]
+[    0.000000] kernel:   node   0: [mem 0x0000000080c00000-0x00000000826fffff]
+[    0.000000] kernel:   node   0: [mem 0x000000008e400000-0x000000009efbffff]
+[    0.000000] kernel:   node   0: [mem 0x000000009efc0000-0x000000009effffff]
+[    0.000000] kernel:   node   0: [mem 0x000000009f000000-0x000000009f5cffff]
+[    0.000000] kernel:   node   0: [mem 0x000000009f5f7000-0x000000009f5fffff]
+[    0.000000] kernel:   node   0: [mem 0x000000009f600000-0x00000000aeafffff]
+[    0.000000] kernel:   node   0: [mem 0x00000000aeb00000-0x00000000bfffffff]
+[    0.000000] kernel:   node   0: [mem 0x00000000c6200000-0x00000000c85fffff]
+[    0.000000] kernel:   node   0: [mem 0x00000000c8600000-0x00000000ffa75fff]
+[    0.000000] kernel:   node   0: [mem 0x00000000ffa76000-0x00000000fff21fff]
+[    0.000000] kernel:   node   0: [mem 0x00000000fff22000-0x00000003ffffffff]
+[    0.000000] kernel:   node   0: [mem 0x0000000800000000-0x000000087fffffff]
+[    0.000000] kernel: Initmem setup node 0 [mem 0x0000000080600000-0x000000087fffffff]
+[    0.000000] kernel: On node 0, zone DMA: 1536 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 384 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 16 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 784 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 48384 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 39 pages in unavailable ranges
+[    0.000000] kernel: On node 0, zone DMA: 25088 pages in unavailable ranges
+[    0.000000] kernel: psci: probing for conduit method from DT.
+[    0.000000] kernel: psci: PSCIv1.1 detected in firmware.
+[    0.000000] kernel: psci: Using standard PSCI v0.2 function IDs
+[    0.000000] kernel: psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] kernel: psci: SMC Calling Convention v1.1
+[    0.000000] kernel: psci: OSI mode supported.
+[    0.000000] kernel: psci: [Firmware Bug]: failed to set PC mode: -3
+[    0.000000] kernel: percpu: Embedded 20 pages/cpu s42472 r8192 d31256 u81920
+[    0.000000] kernel: pcpu-alloc: s42472 r8192 d31256 u81920 alloc=20*4096
+[    0.000000] kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] kernel: Detected PIPT I-cache on CPU0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR1_EL1[31:28]: already set to 0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR1_EL1[27:24]: forced to 0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR1_EL1[11:8]: already set to 0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR1_EL1[7:4]: forced to 0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR2_EL1[15:12]: already set to 0
+[    0.000000] kernel: CPU features: SYS_ID_AA64ISAR2_EL1[11:8]: already set to 0
+[    0.000000] kernel: CPU features: detected: GIC system register CPU interface
+[    0.000000] kernel: CPU features: detected: Hardware dirty bit management
+[    0.000000] kernel: CPU features: detected: Spectre-v4
+[    0.000000] kernel: CPU features: detected: Spectre-BHB
+[    0.000000] kernel: CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] kernel: CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] kernel: alternatives: applying boot alternatives
+[    0.000000] kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.4.13-sc8280xp-arm64 root=UUID=f9c93be3-aa69-4df7-a700-9331aebc0809 ro efi=noruntime clk_ignore_unused pd_ignore_unused console=tty1 quiet splash plymouth.ignore-serial-consoles i915.force_probe=* loglevel=7
+[    0.000000] kernel: Unknown kernel command line parameters "splash BOOT_IMAGE=/boot/vmlinuz-6.4.13-sc8280xp-arm64", will be passed to user space.
+[    0.000000] kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.000000] kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] kernel: Fallback order for Node 0: 0 
+[    0.000000] kernel: Built 1 zonelists, mobility grouping on.  Total pages: 4053728
+[    0.000000] kernel: Policy zone: Normal
+[    0.000000] kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] kernel: software IO TLB: area num 8.
+[    0.000000] kernel: software IO TLB: mapped [mem 0x00000000f7f30000-0x00000000fbf30000] (64MB)
+[    0.000000] kernel: Memory: 15586284K/16472292K available (9088K kernel code, 1332K rwdata, 2896K rodata, 2048K init, 469K bss, 754936K reserved, 131072K cma-reserved)
+[    0.000000] kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] kernel: rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] kernel: rcu:         RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
+[    0.000000] kernel:         Trampoline variant of Tasks RCU enabled.
+[    0.000000] kernel:         Tracing variant of Tasks RCU enabled.
+[    0.000000] kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] kernel: GICv3: 960 SPIs implemented
+[    0.000000] kernel: GICv3: 0 Extended SPIs implemented
+[    0.000000] kernel: Root IRQ handler: gic_handle_irq
+[    0.000000] kernel: GICv3: GICv3 features: 16 PPIs
+[    0.000000] kernel: GICv3: CPU0: found redistributor 0 region 0:0x0000000017a60000
+[    0.000000] kernel: ITS [mem 0x17a40000-0x17a5ffff]
+[    0.000000] kernel: ITS@0x0000000017a40000: allocated 8192 Devices @100050000 (indirect, esz 8, psz 64K, shr 1)
+[    0.000000] kernel: ITS@0x0000000017a40000: allocated 32768 Interrupt Collections @100060000 (flat, esz 2, psz 64K, shr 1)
+[    0.000000] kernel: GICv3: using LPI property table @0x0000000100070000
+[    0.000000] kernel: GICv3: CPU0: using allocated LPI pending table @0x0000000100080000
+[    0.000000] kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] kernel: arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000000] kernel: sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000057] kernel: Console: colour dummy device 80x25
+[    0.000061] kernel: printk: console [tty1] enabled
+[    0.000222] kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    0.000228] kernel: pid_max: default: 32768 minimum: 301
+[    0.000277] kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.000295] kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.000760] kernel: cblist_init_generic: Setting adjustable number of callback queues.
+[    0.000768] kernel: cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.000783] kernel: cblist_init_generic: Setting adjustable number of callback queues.
+[    0.000786] kernel: cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.000817] kernel: rcu: Hierarchical SRCU implementation.
+[    0.000820] kernel: rcu:         Max phase no-delay instances is 1000.
+[    0.000956] kernel: Platform MSI: msi-controller@17a40000 domain created
+[    0.001005] kernel: PCI/MSI: /soc@0/interrupt-controller@17a00000/msi-controller@17a40000 domain created
+[    0.001025] kernel: EFI runtime services will be disabled.
+[    0.001096] kernel: smp: Bringing up secondary CPUs ...
+[    0.001539] kernel: Detected PIPT I-cache on CPU1
+[    0.001576] kernel: GICv3: CPU1: found redistributor 100 region 0:0x0000000017a80000
+[    0.001588] kernel: GICv3: CPU1: using allocated LPI pending table @0x0000000100090000
+[    0.001614] kernel: CPU1: Booted secondary processor 0x0000000100 [0x410fd4b0]
+[    0.002086] kernel: Detected PIPT I-cache on CPU2
+[    0.002109] kernel: GICv3: CPU2: found redistributor 200 region 0:0x0000000017aa0000
+[    0.002118] kernel: GICv3: CPU2: using allocated LPI pending table @0x00000001000a0000
+[    0.002136] kernel: CPU2: Booted secondary processor 0x0000000200 [0x410fd4b0]
+[    0.002601] kernel: Detected PIPT I-cache on CPU3
+[    0.002621] kernel: GICv3: CPU3: found redistributor 300 region 0:0x0000000017ac0000
+[    0.002629] kernel: GICv3: CPU3: using allocated LPI pending table @0x00000001000b0000
+[    0.002647] kernel: CPU3: Booted secondary processor 0x0000000300 [0x410fd4b0]
+[    0.005220] kernel: Detected PIPT I-cache on CPU4
+[    0.005257] kernel: GICv3: CPU4: found redistributor 400 region 0:0x0000000017ae0000
+[    0.005268] kernel: GICv3: CPU4: using allocated LPI pending table @0x00000001000c0000
+[    0.005294] kernel: CPU4: Booted secondary processor 0x0000000400 [0x410fd4c0]
+[    0.005866] kernel: Detected PIPT I-cache on CPU5
+[    0.005908] kernel: GICv3: CPU5: found redistributor 500 region 0:0x0000000017b00000
+[    0.005921] kernel: GICv3: CPU5: using allocated LPI pending table @0x00000001000d0000
+[    0.005947] kernel: CPU5: Booted secondary processor 0x0000000500 [0x410fd4c0]
+[    0.006543] kernel: Detected PIPT I-cache on CPU6
+[    0.006587] kernel: GICv3: CPU6: found redistributor 600 region 0:0x0000000017b20000
+[    0.006599] kernel: GICv3: CPU6: using allocated LPI pending table @0x00000001000e0000
+[    0.006625] kernel: CPU6: Booted secondary processor 0x0000000600 [0x410fd4c0]
+[    0.007235] kernel: Detected PIPT I-cache on CPU7
+[    0.007278] kernel: GICv3: CPU7: found redistributor 700 region 0:0x0000000017b40000
+[    0.007289] kernel: GICv3: CPU7: using allocated LPI pending table @0x00000001000f0000
+[    0.007313] kernel: CPU7: Booted secondary processor 0x0000000700 [0x410fd4c0]
+[    0.007370] kernel: smp: Brought up 1 node, 8 CPUs
+[    0.007394] kernel: SMP: Total of 8 processors activated.
+[    0.007396] kernel: CPU features: detected: 32-bit EL0 Support
+[    0.007399] kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.007401] kernel: CPU features: detected: Common not Private translations
+[    0.007403] kernel: CPU features: detected: CRC32 instructions
+[    0.007406] kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.007408] kernel: CPU features: detected: LSE atomic instructions
+[    0.007410] kernel: CPU features: detected: Privileged Access Never
+[    0.007412] kernel: CPU features: detected: RAS Extension Support
+[    0.007414] kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.007466] kernel: CPU: All CPU(s) started at EL1
+[    0.007469] kernel: alternatives: applying system-wide alternatives
+[    0.009252] kernel: devtmpfs: initialized
+[    0.012223] kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.012232] kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.012633] kernel: pinctrl core: initialized pinctrl subsystem
+[    0.012782] kernel: SMBIOS 3.3 present.
+[    0.012788] kernel: DMI: HUAWEI GK-W7X/GK-W7X-PCB, BIOS 2.16 01/31/2023
+[    0.012856] kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.013134] kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    0.013208] kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.013278] kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.013291] kernel: audit: initializing netlink subsys (disabled)
+[    0.013328] kernel: audit: type=2000 audit(0.012:1): state=initialized audit_enabled=0 res=1
+[    0.013416] kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    0.013418] kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    0.013433] kernel: cpuidle: using governor menu
+[    0.013469] kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.013537] kernel: ASID allocator initialised with 32768 entries
+[    0.018276] kernel: platform ae00000.display-subsystem: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[    0.020789] kernel: KASLR enabled
+[    0.020965] kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.020973] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.020978] kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.020983] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.020987] kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.020992] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.020996] kernel: HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.021001] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.021973] kernel: iommu: Default domain type: Translated 
+[    0.021981] kernel: iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.022093] kernel: SCSI subsystem initialized
+[    0.022121] kernel: usbcore: registered new interface driver usbfs
+[    0.022136] kernel: usbcore: registered new interface driver hub
+[    0.022151] kernel: usbcore: registered new device driver usb
+[    0.022315] kernel: CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[    0.022513] kernel: scmi_core: SCMI protocol bus registered
+[    0.022873] kernel: vgaarb: loaded
+[    0.022965] kernel: clocksource: Switched to clocksource arch_sys_counter
+[    0.023039] kernel: VFS: Disk quotas dquot_6.6.0
+[    0.023055] kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.025032] kernel: NET: Registered PF_INET protocol family
+[    0.025218] kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.031594] kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.031629] kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.031641] kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.031879] kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.032335] kernel: TCP: Hash tables configured (established 131072 bind 65536)
+[    0.032375] kernel: UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.032430] kernel: UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.032518] kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.032533] kernel: PCI: CLS 0 bytes, default 64
+[    0.032602] kernel: Unpacking initramfs...
+[    0.033073] kernel: Initialise system trusted keyrings
+[    0.033116] kernel: workingset: timestamp_bits=42 max_order=22 bucket_order=0
+[    0.059776] kernel: Key type asymmetric registered
+[    0.059781] kernel: Asymmetric key parser 'x509' registered
+[    0.059799] kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.059805] kernel: io scheduler mq-deadline registered
+[    0.059810] kernel: io scheduler kyber registered
+[    0.067616] kernel: loop: module loaded
+[    0.067738] kernel: spmi spmi-0: PMIC arbiter version v5 (0x50020000)
+[    0.075074] kernel: tun: Universal TUN/TAP device driver, 1.6
+[    0.075327] kernel: usbcore: registered new interface driver usb-storage
+[    0.079689] kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    0.079935] kernel: efifb: invalid framebuffer address
+[    0.080048] kernel: usbcore: registered new interface driver usbhid
+[    0.080054] kernel: usbhid: USB HID core driver
+[    0.080374] kernel: hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.080985] kernel: NET: Registered PF_PACKET protocol family
+[    0.082617] kernel: registered taskstats version 1
+[    0.082693] kernel: Loading compiled-in X.509 certificates
+[    0.088547] kernel: platform 18200000.rsc:regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@18200000/regulators-0/smps11
+[    0.088564] kernel: platform 18200000.rsc:regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@18200000/regulators-0/smps12
+[    0.088663] kernel: platform 18200000.rsc:regulators-1: Fixed dependency cycle(s) with /soc@0/rsc@18200000/regulators-0/smps11
+[    0.088670] kernel: platform 18200000.rsc:regulators-1: Fixed dependency cycle(s) with /soc@0/rsc@18200000/regulators-1/bob
+[    0.088675] kernel: platform 18200000.rsc:regulators-1: Fixed dependency cycle(s) with /soc@0/rsc@18200000/regulators-1/smps1
+[    0.089106] kernel: vreg_s10b: Setting 1800000-1800000uV
+[    0.089120] kernel: vreg_s1c: Setting 1880000-1900000uV
+[    0.089751] kernel: vreg_s11b: Setting 1272000-1272000uV
+[    0.089784] kernel: vreg_l1c: Setting 1800000-1800000uV
+[    0.090056] kernel: vreg_l8c: Setting 1800000-1800000uV
+[    0.090314] kernel: vreg_l12c: Setting 1800000-1800000uV
+[    0.090564] kernel: vreg_s12b: Setting 984000-984000uV
+[    0.090598] kernel: vreg_l13c: Setting 3072000-3072000uV
+[    0.090865] kernel: vreg_bob: Setting 3008000-3960000uV
+[    0.091379] kernel: vreg_l1b: Setting 912000-912000uV
+[    0.091741] kernel: vreg_l3b: Setting 1200000-1200000uV
+[    0.092760] kernel: vreg_l4b: Setting 912000-912000uV
+[    0.093120] kernel: vreg_l6b: Setting 880000-880000uV
+[    0.182059] kernel: qcom_scm: convention: smc arm 64
+[    0.182171] kernel: qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+[    0.182180] kernel: qcom_scm firmware:scm: qseecom: untested device, skipping
+[    0.182404] kernel: vreg_l2d: Setting 3072000-3072000uV
+[    0.182570] kernel: vreg_l3d: Setting 1200000-1200000uV
+[    0.182862] kernel: arm-smmu 3da0000.iommu: probing hardware configuration...
+[    0.182874] kernel: arm-smmu 3da0000.iommu: SMMUv2 with:
+[    0.182897] kernel: arm-smmu 3da0000.iommu:         stage 1 translation
+[    0.182900] kernel: arm-smmu 3da0000.iommu:         coherent table walk
+[    0.182904] kernel: arm-smmu 3da0000.iommu:         stream matching with 9 register groups
+[    0.182920] kernel: arm-smmu 3da0000.iommu:         7 context banks (0 stage-2 only)
+[    0.182936] kernel: arm-smmu 3da0000.iommu:         Supported page sizes: 0x61311000
+[    0.182938] kernel: arm-smmu 3da0000.iommu:         Stage-1: 48-bit VA -> 36-bit IPA
+[    0.183065] kernel: arm-smmu 3da0000.iommu:         preserved 0 boot mappings
+[    0.183090] kernel: vreg_l4d: Setting 1200000-1200000uV
+[    0.183720] kernel: vreg_l6d: Setting 880000-880000uV
+[    0.184623] kernel: vreg_l7d: Setting 3072000-3072000uV
+[    0.184635] kernel: arm-smmu 15000000.iommu: probing hardware configuration...
+[    0.184647] kernel: arm-smmu 15000000.iommu: SMMUv2 with:
+[    0.184656] kernel: arm-smmu 15000000.iommu:         stage 1 translation
+[    0.184658] kernel: arm-smmu 15000000.iommu:         non-coherent table walk
+[    0.184661] kernel: arm-smmu 15000000.iommu:         (IDR0.CTTW overridden by FW configuration)
+[    0.184665] kernel: arm-smmu 15000000.iommu:         stream matching with 162 register groups
+[    0.184671] kernel: arm-smmu 15000000.iommu:         110 context banks (0 stage-2 only)
+[    0.184681] kernel: arm-smmu 15000000.iommu:         Limiting the stream matching groups to 128
+[    0.185002] kernel: arm-smmu 15000000.iommu:         Supported page sizes: 0x61311000
+[    0.185005] kernel: arm-smmu 15000000.iommu:         Stage-1: 36-bit VA -> 36-bit IPA
+[    0.185065] kernel: arm-smmu 15000000.iommu:         preserved 0 boot mappings
+[    0.185602] kernel: vreg_l8d: Setting 912000-912000uV
+[    0.186173] kernel: adreno 3d00000.gpu: Adding to iommu group 0
+[    0.186331] kernel: msm-mdss ae00000.display-subsystem: Adding to iommu group 1
+[    0.186560] kernel: vreg_l9d: Setting 912000-912000uV
+[    0.187565] kernel: vreg_l10d: Setting 912000-912000uV
+[    0.213307] kernel: platform ae90000.displayport-controller: Fixed dependency cycle(s) with /soc@0/phy@88eb000/ports/port@2/endpoint
+[    0.213324] kernel: platform ae90000.displayport-controller: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000/ports/port@2/endpoint
+[    0.213349] kernel: platform ae90000.displayport-controller: Fixed dependency cycle(s) with /soc@0/phy@88eb000
+[    0.214555] kernel: platform ae94000.dsi: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/panel@0/port/endpoint
+[    0.214567] kernel: platform ae94000.dsi: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000/ports/port@0/endpoint
+[    0.219836] kernel: msm_dsi_phy ae94400.phy: supply vdds not found, using dummy regulator
+[    0.220632] kernel: platform ae98000.displayport-controller: Fixed dependency cycle(s) with /soc@0/phy@8903000/ports/port@2/endpoint
+[    0.220648] kernel: platform ae98000.displayport-controller: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000/ports/port@4/endpoint
+[    0.220668] kernel: platform ae98000.displayport-controller: Fixed dependency cycle(s) with /soc@0/phy@8903000
+[    0.223709] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_mp_master_clk, its parent clk: gcc_usb30_mp_master_clk_src, its rate: 19200000, its req_rate:200000000
+[    0.223721] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.223741] kernel: clk_calc_new_rates: gcc_usb30_mp_master_clk pass-through clock with adjustable parent
+[    0.223747] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_mp_master_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:200000000
+[    0.223751] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.223758] kernel: clk_calc_new_rates: gcc_usb30_mp_master_clk_src clk_core_can_round is TRUE
+[    0.223760] kernel: clk_calc_new_rates: gcc_usb30_mp_master_clk_src new rate is 200000000, req.rate is 200000000 and parent is gcc_gpll0
+[    0.235231] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_prim_master_clk, its parent clk: gcc_usb30_prim_master_clk_src, its rate: 19200000, its req_rate:200000000
+[    0.235240] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.235243] kernel: clk_calc_new_rates: gcc_usb30_prim_master_clk pass-through clock with adjustable parent
+[    0.235245] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_prim_master_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:200000000
+[    0.235249] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.235251] kernel: clk_calc_new_rates: gcc_usb30_prim_master_clk_src clk_core_can_round is TRUE
+[    0.235254] kernel: clk_calc_new_rates: gcc_usb30_prim_master_clk_src new rate is 200000000, req.rate is 200000000 and parent is gcc_gpll0
+[    0.242093] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_sec_master_clk, its parent clk: gcc_usb30_sec_master_clk_src, its rate: 19200000, its req_rate:200000000
+[    0.242103] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.242106] kernel: clk_calc_new_rates: gcc_usb30_sec_master_clk pass-through clock with adjustable parent
+[    0.242109] kernel: clk_calc_new_rates: now calc clk: gcc_usb30_sec_master_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:200000000
+[    0.242112] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.242114] kernel: clk_calc_new_rates: gcc_usb30_sec_master_clk_src clk_core_can_round is TRUE
+[    0.242117] kernel: clk_calc_new_rates: gcc_usb30_sec_master_clk_src new rate is 200000000, req.rate is 200000000 and parent is gcc_gpll0
+[    0.248058] kernel: geni_se_qup 8c0000.geniqup: Adding to iommu group 2
+[    0.248316] kernel: geni_se_qup 9c0000.geniqup: Adding to iommu group 3
+[    0.250383] kernel: 988000.serial: ttyHS1 at MMIO 0x988000 (irq = 189, base_baud = 0) is a MSM
+[    0.253533] kernel: serial serial0: tty port ttyHS1 registered
+[    0.254017] kernel: geni_se_qup ac0000.geniqup: Adding to iommu group 4
+[    0.255137] kernel: dsi_get_config: msm_clk_get is ok!
+[    0.255149] kernel: dsi_get_config: clk_prepare_enable is ok!
+[    0.255156] kernel: dsi_get_config: dsi_get_version is ok! Version 3:20050001
+[    0.255179] kernel: msm_dsi ae94000.dsi: supply vdda not found, using dummy regulator
+[    0.255453] kernel: mipi-dsi ae94000.dsi.0: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000/ports/port@1/endpoint
+[    0.257128] kernel: PM: genpd: Not disabling unused power domains
+[    0.258266] kernel: input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    0.259029] kernel: clk: Not disabling unused clocks
+[    0.725746] kernel: Freeing initrd memory: 24996K
+[    0.726764] kernel: Freeing unused kernel memory: 2048K
+[    0.736267] kernel: Run /init as init process
+[    0.736298] kernel:   with arguments:
+[    0.736308] kernel:     /init
+[    0.736314] kernel:     splash
+[    0.736321] kernel:   with environment:
+[    0.736327] kernel:     HOME=/
+[    0.736331] kernel:     TERM=linux
+[    0.736336] kernel:     BOOT_IMAGE=/boot/vmlinuz-6.4.13-sc8280xp-arm64
+[    0.823494] kernel: NET: Registered PF_QIPCRTR protocol family
+[    0.825117] kernel: clk_calc_new_rates: now calc clk: gcc_pcie4_phy_rchng_clk, its parent clk: gcc_pcie_4_phy_rchng_clk_src, its rate: 19200000, its req_rate:100000000
+[    0.825130] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825133] kernel: clk_calc_new_rates: gcc_pcie4_phy_rchng_clk pass-through clock with adjustable parent
+[    0.825137] kernel: clk_calc_new_rates: now calc clk: gcc_pcie_4_phy_rchng_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:100000000
+[    0.825141] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825144] kernel: clk_calc_new_rates: gcc_pcie_4_phy_rchng_clk_src clk_core_can_round is TRUE
+[    0.825147] kernel: clk_calc_new_rates: gcc_pcie_4_phy_rchng_clk_src new rate is 100000000, req.rate is 100000000 and parent is gcc_gpll0_out_even
+[    0.825610] kernel: clk_calc_new_rates: now calc clk: gcc_pcie3a_phy_rchng_clk, its parent clk: gcc_pcie_3a_phy_rchng_clk_src, its rate: 19200000, its req_rate:100000000
+[    0.825617] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825620] kernel: clk_calc_new_rates: gcc_pcie3a_phy_rchng_clk pass-through clock with adjustable parent
+[    0.825623] kernel: clk_calc_new_rates: now calc clk: gcc_pcie_3a_phy_rchng_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:100000000
+[    0.825626] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825629] kernel: clk_calc_new_rates: gcc_pcie_3a_phy_rchng_clk_src clk_core_can_round is TRUE
+[    0.825631] kernel: clk_calc_new_rates: gcc_pcie_3a_phy_rchng_clk_src new rate is 100000000, req.rate is 100000000 and parent is gcc_gpll0_out_even
+[    0.825926] kernel: clk_calc_new_rates: now calc clk: gcc_pcie2a_phy_rchng_clk, its parent clk: gcc_pcie_2a_phy_rchng_clk_src, its rate: 19200000, its req_rate:100000000
+[    0.825930] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825933] kernel: clk_calc_new_rates: gcc_pcie2a_phy_rchng_clk pass-through clock with adjustable parent
+[    0.825936] kernel: clk_calc_new_rates: now calc clk: gcc_pcie_2a_phy_rchng_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:100000000
+[    0.825940] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.825942] kernel: clk_calc_new_rates: gcc_pcie_2a_phy_rchng_clk_src clk_core_can_round is TRUE
+[    0.825945] kernel: clk_calc_new_rates: gcc_pcie_2a_phy_rchng_clk_src new rate is 100000000, req.rate is 100000000 and parent is gcc_gpll0_out_even
+[    0.826677] kernel: qcom-pcie 1c00000.pcie: supply vdda not found, using dummy regulator
+[    0.826830] kernel: qcom-pcie 1c00000.pcie: host bridge /soc@0/pcie@1c00000 ranges:
+[    0.826841] kernel: qcom-pcie 1c00000.pcie:       IO 0x0030200000..0x00302fffff -> 0x0000000000
+[    0.826849] kernel: qcom-pcie 1c00000.pcie:      MEM 0x0030300000..0x0031ffffff -> 0x0030300000
+[    0.827338] kernel: qcom-pcie 1c20000.pcie: supply vdda not found, using dummy regulator
+[    0.827365] kernel: qcom-pcie 1c10000.pcie: supply vdda not found, using dummy regulator
+[    0.827481] kernel: remoteproc remoteproc0: 3000000.remoteproc is available
+[    0.827554] kernel: qcom-pcie 1c20000.pcie: host bridge /soc@0/pcie@1c20000 ranges:
+[    0.827608] kernel: qcom-pcie 1c20000.pcie:       IO 0x003c200000..0x003c2fffff -> 0x0000000000
+[    0.827614] kernel: qcom-pcie 1c20000.pcie:      MEM 0x003c300000..0x003dffffff -> 0x003c300000
+[    0.827751] kernel: qcom-snps-hs-femto-v2-phy 88e7000.phy: supply vdda-pll not found, using dummy regulator
+[    0.827760] kernel: qcom-pcie 1c10000.pcie: host bridge /soc@0/pcie@1c10000 ranges:
+[    0.827778] kernel: qcom-pcie 1c10000.pcie:       IO 0x0034200000..0x00342fffff -> 0x0000000000
+[    0.827787] kernel: qcom-pcie 1c10000.pcie:      MEM 0x0034300000..0x0035ffffff -> 0x0034300000
+[    0.827789] kernel: qcom-snps-hs-femto-v2-phy 88e7000.phy: supply vdda33 not found, using dummy regulator
+[    0.827801] kernel: qcom-snps-hs-femto-v2-phy 88e7000.phy: supply vdda18 not found, using dummy regulator
+[    0.827866] kernel: qcom-snps-hs-femto-v2-phy 88e8000.phy: supply vdda-pll not found, using dummy regulator
+[    0.827908] kernel: qcom-snps-hs-femto-v2-phy 88e8000.phy: supply vdda33 not found, using dummy regulator
+[    0.827921] kernel: qcom-snps-hs-femto-v2-phy 88e8000.phy: supply vdda18 not found, using dummy regulator
+[    0.827981] kernel: qcom-snps-hs-femto-v2-phy 88e9000.phy: supply vdda-pll not found, using dummy regulator
+[    0.828044] kernel: qcom-snps-hs-femto-v2-phy 88e9000.phy: supply vdda33 not found, using dummy regulator
+[    0.828058] kernel: qcom-snps-hs-femto-v2-phy 88e9000.phy: supply vdda18 not found, using dummy regulator
+[    0.828540] kernel: qcom-qmp-usb-phy 88ef000.phy: supply vdda-phy not found, using dummy regulator
+[    0.828550] kernel: qcom-snps-hs-femto-v2-phy 88ea000.phy: supply vdda-pll not found, using dummy regulator
+[    0.828601] kernel: qcom-qmp-usb-phy 88ef000.phy: supply vdda-pll not found, using dummy regulator
+[    0.828628] kernel: qcom-snps-hs-femto-v2-phy 88ea000.phy: supply vdda33 not found, using dummy regulator
+[    0.828646] kernel: qcom-snps-hs-femto-v2-phy 88ea000.phy: supply vdda18 not found, using dummy regulator
+[    0.828890] kernel: qcom-qmp-usb-phy 88f1000.phy: supply vdda-phy not found, using dummy regulator
+[    0.828966] kernel: qcom-qmp-usb-phy 88f1000.phy: supply vdda-pll not found, using dummy regulator
+[    0.829476] kernel: remoteproc remoteproc1: 1b300000.remoteproc is available
+[    0.829655] kernel: dwc3 a400000.usb: Adding to iommu group 5
+[    0.830033] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with 88eb000.phy
+[    0.830498] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with 8903000.phy
+[    0.833910] kernel: remoteproc remoteproc1: powering up 1b300000.remoteproc
+[    0.835119] kernel: xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    0.835130] kernel: xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    0.835269] kernel: xhci-hcd xhci-hcd.0.auto: hcc params 0x0120ffe5 hci version 0x110 quirks 0x0000000000000010
+[    0.835285] kernel: xhci-hcd xhci-hcd.0.auto: irq 204, io mem 0x0a400000
+[    0.835343] kernel: xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    0.835347] kernel: xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    0.835351] kernel: xhci-hcd xhci-hcd.0.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    0.835575] kernel: hub 1-0:1.0: USB hub found
+[    0.835596] kernel: hub 1-0:1.0: 4 ports detected
+[    0.835758] kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.835891] kernel: hub 2-0:1.0: USB hub found
+[    0.835900] kernel: hub 2-0:1.0: 2 ports detected
+[    0.836068] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with usb0-sbu-mux
+[    0.836150] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with usb1-sbu-mux
+[    0.836805] kernel: dwc3 a600000.usb: Adding to iommu group 6
+[    0.837206] kernel: remoteproc remoteproc1: Booting fw image qcom/sc8280xp/LENOVO/21BX/qccdsp8280.mbn, size 3575808
+[    0.839490] kernel: xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    0.839499] kernel: xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[    0.841931] kernel: xhci-hcd xhci-hcd.1.auto: hcc params 0x0110ffc5 hci version 0x110 quirks 0x0000000000000010
+[    0.841946] kernel: xhci-hcd xhci-hcd.1.auto: irq 205, io mem 0x0a600000
+[    0.841995] kernel: xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    0.841999] kernel: xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[    0.842004] kernel: xhci-hcd xhci-hcd.1.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    0.842190] kernel: hub 3-0:1.0: USB hub found
+[    0.842207] kernel: hub 3-0:1.0: 1 port detected
+[    0.842322] kernel: usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.842467] kernel: hub 4-0:1.0: USB hub found
+[    0.842479] kernel: hub 4-0:1.0: 1 port detected
+[    0.842570] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with a600000.usb
+[    0.842663] kernel: dwc3 a800000.usb: Adding to iommu group 7
+[    0.843748] kernel: remoteproc remoteproc0: powering up 3000000.remoteproc
+[    0.845466] kernel: xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    0.845474] kernel: xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 5
+[    0.847899] kernel: xhci-hcd xhci-hcd.2.auto: hcc params 0x0110ffc5 hci version 0x110 quirks 0x0000000000000010
+[    0.847914] kernel: xhci-hcd xhci-hcd.2.auto: irq 206, io mem 0x0a800000
+[    0.847959] kernel: xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    0.847963] kernel: xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 6
+[    0.847966] kernel: xhci-hcd xhci-hcd.2.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    0.848094] kernel: hub 5-0:1.0: USB hub found
+[    0.848101] kernel: hub 5-0:1.0: 1 port detected
+[    0.848160] kernel: usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.848259] kernel: hub 6-0:1.0: USB hub found
+[    0.848265] kernel: hub 6-0:1.0: 1 port detected
+[    0.848321] kernel: qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with a800000.usb
+[    0.849118] kernel: msm_dpu ae01000.display-controller: bound ae94000.dsi (ops 0xffffc9a1defd1710)
+[    0.849246] kernel: msm_dpu ae01000.display-controller: bound ae90000.displayport-controller (ops 0xffffc9a1defd05c0)
+[    0.849340] kernel: msm_dpu ae01000.display-controller: bound ae98000.displayport-controller (ops 0xffffc9a1defd05c0)
+[    0.849561] kernel: adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+[    0.849595] kernel: adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+[    0.849631] kernel: adreno 3d00000.gpu: [drm:msm_devfreq_init] *ERROR* Couldn't register GPU cooling device
+[    0.850419] kernel: platform 3d6a000.gmu: Adding to iommu group 8
+[    0.855297] kernel: msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops 0xffffc9a1defb8aa0)
+[    0.855472] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_mdp_clk, its parent clk: disp0_cc_mdss_mdp_clk_src, its rate: 19200000, its req_rate:600000000
+[    0.855478] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.855481] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk pass-through clock with adjustable parent
+[    0.855484] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_mdp_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:600000000
+[    0.855488] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.855490] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk_src clk_core_can_round is TRUE
+[    0.855492] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk_src new rate is 600000000, req.rate is 600000000 and parent is disp0_cc_pll1
+[    0.855759] kernel: [drm:dpu_kms_hw_init:1093] dpu hardware revision:0x80000000
+[    0.856593] kernel: [drm] Initialized msm 1.10.0 20130625 for ae01000.display-controller on minor 0
+[    0.856714] kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded qcom/a660_sqe.fw from new location
+[    0.856799] kernel: msm_dpu ae01000.display-controller: [drm:adreno_request_fw] loaded qcom/a690_gmu.bin from new location
+[    0.856846] kernel: clk_calc_new_rates: now calc clk: gpu_cc_cx_gmu_clk, its parent clk: gpu_cc_gmu_clk_src, its rate: 19200000, its req_rate:200000000
+[    0.856850] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.856853] kernel: clk_calc_new_rates: gpu_cc_cx_gmu_clk pass-through clock with adjustable parent
+[    0.856855] kernel: clk_calc_new_rates: now calc clk: gpu_cc_gmu_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:200000000
+[    0.856859] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.856861] kernel: clk_calc_new_rates: gpu_cc_gmu_clk_src clk_core_can_round is TRUE
+[    0.856864] kernel: clk_calc_new_rates: gpu_cc_gmu_clk_src new rate is 200000000, req.rate is 200000000 and parent is gcc_gpu_gpll0_div_clk_src
+[    0.856886] kernel: remoteproc remoteproc0: Booting fw image qcom/sc8280xp/LENOVO/21BX/qcadsp8280.mbn, size 14367860
+[    0.856896] kernel: clk_calc_new_rates: now calc clk: gpu_cc_hub_cx_int_clk, its parent clk: gpu_cc_hub_cx_int_div_clk_src, its rate: 19200000, its req_rate:150000000
+[    0.856901] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.856903] kernel: clk_calc_new_rates: gpu_cc_hub_cx_int_clk pass-through clock with adjustable parent
+[    0.856906] kernel: clk_calc_new_rates: now calc clk: gpu_cc_hub_cx_int_div_clk_src, its parent clk: gpu_cc_hub_clk_src, its rate: 19200000, its req_rate:150000000
+[    0.856909] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.856912] kernel: clk_calc_new_rates: gpu_cc_hub_cx_int_div_clk_src clk_core_can_round is TRUE
+[    0.856915] kernel: clk_calc_new_rates: gpu_cc_hub_cx_int_div_clk_src new rate is 200000000, req.rate is 200000000 and parent is gpu_cc_hub_clk_src
+[    0.856919] kernel: clk_calc_new_rates: set gpu_cc_hub_cx_int_div_clk_src parent gpu_cc_hub_clk_src rate: 200000000
+[    0.856922] kernel: clk_calc_new_rates: now calc clk: gpu_cc_hub_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:200000000
+[    0.856925] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.856927] kernel: clk_calc_new_rates: gpu_cc_hub_clk_src clk_core_can_round is TRUE
+[    0.856929] kernel: clk_calc_new_rates: gpu_cc_hub_clk_src new rate is 200000000, req.rate is 200000000 and parent is gcc_gpu_gpll0_clk_src
+[    0.880050] kernel: qcom_q6v5_pas 3000000.remoteproc: error -22 initializing firmware qcom/sc8280xp/LENOVO/21BX/qcadsp8280.mbn
+[    0.880150] kernel: remoteproc remoteproc0: can't start rproc 3000000.remoteproc: -22
+[    0.912992] kernel: remoteproc remoteproc1: remote processor 1b300000.remoteproc is now up
+[    0.939196] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    0.940796] kernel: qcom-pcie 1c20000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[    0.941064] kernel: qcom-pcie 1c10000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[    0.947206] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    0.947301] kernel: dsi_mgr_phy_enable: single dsi, id is 0
+[    0.948407] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    0.948410] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    0.948811] kernel: dsi_7nm_pll_restore_state:set dsi_pll rate when restore
+[    0.948813] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=0, parent's=19200000
+[    0.949200] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 0, its req_rate:105693000
+[    0.949202] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949204] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk pass-through clock with adjustable parent
+[    0.949205] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 0, its req_rate:105693000
+[    0.949206] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949207] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    0.949210] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    0.949226] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    0.949227] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 0, its req_rate:105693000
+[    0.949228] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949229] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    0.949232] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    0.949234] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    0.949235] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 0, its req_rate:739851000
+[    0.949237] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949237] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    0.949240] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    0.949241] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    0.949242] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 0, its req_rate:739851000
+[    0.949243] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949244] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    0.949245] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    0.949246] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    0.949247] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 0, its req_rate:739851000
+[    0.949249] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949250] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    0.949250] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    0.949289] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    0.949389] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk, its parent clk: disp0_cc_mdss_pclk0_clk_src, its rate: 14092400, its req_rate:281848000
+[    0.949390] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949391] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk pass-through clock with adjustable parent
+[    0.949392] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk_src, its parent clk: dsi0_phy_pll_out_dsiclk, its rate: 14092400, its req_rate:281848000
+[    0.949393] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949394] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_can_round is TRUE
+[    0.949395] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_determine_round_nolock is error -22
+[    0.949396] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src new rate is 281848000, req.rate is 281848000 and parent is dsi0_phy_pll_out_dsiclk
+[    0.949491] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_intf_clk, its parent clk: disp0_cc_mdss_byte0_div_clk_src, its rate: 52846498, its req_rate:105693000
+[    0.949495] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949498] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_intf_clk pass-through clock with adjustable parent
+[    0.949499] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_div_clk_src, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 52846498, its req_rate:105693000
+[    0.949502] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949503] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src clk_core_can_round is TRUE
+[    0.949564] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src new rate is 105693000, req.rate is 105693000 and parent is disp0_cc_mdss_byte0_clk_src
+[    0.949566] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_div_clk_src parent disp0_cc_mdss_byte0_clk_src rate: 105693000
+[    0.949568] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    0.949571] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949573] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    0.949578] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    0.949586] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    0.949589] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    0.949591] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949593] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    0.949598] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    0.949601] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    0.949603] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    0.949605] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949607] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    0.949612] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    0.949615] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    0.949617] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    0.949619] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949621] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    0.949622] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    0.949625] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    0.949627] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    0.949629] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.949631] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    0.949632] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    0.949672] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    0.952608] kernel: qcom-pcie 1c00000.pcie: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[    0.975959] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_mdp_clk, its parent clk: disp0_cc_mdss_mdp_clk_src, its rate: 600000000, its req_rate:300000000
+[    0.975969] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.975973] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk pass-through clock with adjustable parent
+[    0.975975] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_mdp_clk_src, its parent clk: disp0_cc_pll1, its rate: 600000000, its req_rate:300000000
+[    0.975979] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    0.975981] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk_src clk_core_can_round is TRUE
+[    0.975984] kernel: clk_calc_new_rates: disp0_cc_mdss_mdp_clk_src new rate is 300000000, req.rate is 300000000 and parent is disp0_cc_pll1
+[    1.041190] kernel: qcom-pcie 1c20000.pcie: PCIe Gen.3 x4 link up
+[    1.041323] kernel: qcom-pcie 1c20000.pcie: PCI host bridge to bus 0002:00
+[    1.041325] kernel: pci_bus 0002:00: root bus resource [bus 00-ff]
+[    1.041329] kernel: pci_bus 0002:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+[    1.041330] kernel: pci_bus 0002:00: root bus resource [mem 0x3c300000-0x3dffffff]
+[    1.041342] kernel: pci 0002:00:00.0: [17cb:010e] type 01 class 0x060400
+[    1.041350] kernel: pci 0002:00:00.0: reg 0x10: [mem 0x00000000-0x00000fff]
+[    1.041394] kernel: pci 0002:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.042425] kernel: pci 0002:01:00.0: [126f:1001] type 00 class 0x010802
+[    1.042511] kernel: pci 0002:01:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    1.046990] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk, its parent clk: disp0_cc_mdss_pclk0_clk_src, its rate: 14092400, its req_rate:281848000
+[    1.046996] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.046997] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk pass-through clock with adjustable parent
+[    1.046998] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk_src, its parent clk: dsi0_phy_pll_out_dsiclk, its rate: 14092400, its req_rate:281848000
+[    1.047000] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047001] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_can_round is TRUE
+[    1.047002] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_determine_round_nolock is error -22
+[    1.047004] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src new rate is 281848000, req.rate is 281848000 and parent is dsi0_phy_pll_out_dsiclk
+[    1.047114] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_intf_clk, its parent clk: disp0_cc_mdss_byte0_div_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.047119] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047121] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_intf_clk pass-through clock with adjustable parent
+[    1.047123] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_div_clk_src, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.047128] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047131] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src clk_core_can_round is TRUE
+[    1.047192] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src new rate is 105693000, req.rate is 105693000 and parent is disp0_cc_mdss_byte0_clk_src
+[    1.047195] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_div_clk_src parent disp0_cc_mdss_byte0_clk_src rate: 105693000
+[    1.047199] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    1.047203] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047205] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    1.047211] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    1.047229] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    1.047232] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    1.047237] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047239] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    1.047245] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    1.047247] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    1.047250] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    1.047253] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047254] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    1.047259] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    1.047262] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    1.047264] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    1.047267] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047269] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    1.047270] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    1.047273] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    1.047275] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    1.047278] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.047280] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    1.047281] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    1.047329] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    1.051475] kernel: qcom-pcie 1c00000.pcie: PCIe Gen.3 x1 link up
+[    1.051526] kernel: qcom-pcie 1c00000.pcie: PCI host bridge to bus 0006:00
+[    1.051529] kernel: pci_bus 0006:00: root bus resource [bus 00-ff]
+[    1.051531] kernel: pci_bus 0006:00: root bus resource [io  0x0000-0xfffff]
+[    1.051532] kernel: pci_bus 0006:00: root bus resource [mem 0x30300000-0x31ffffff]
+[    1.059063] kernel: pci 0002:00:00.0: BAR 8: assigned [mem 0x3c300000-0x3c3fffff]
+[    1.059066] kernel: pci 0002:00:00.0: BAR 0: assigned [mem 0x3c400000-0x3c400fff]
+[    1.059072] kernel: pci 0002:01:00.0: BAR 0: assigned [mem 0x3c300000-0x3c303fff 64bit]
+[    1.059075] kernel: pci 0006:00:00.0: [17cb:010e] type 01 class 0x060400
+[    1.059134] kernel: pci 0002:00:00.0: PCI bridge to [bus 01-ff]
+[    1.059142] kernel: pci 0002:00:00.0:   bridge window [mem 0x3c300000-0x3c3fffff]
+[    1.059141] kernel: pci 0006:00:00.0: reg 0x10: [mem 0x00000000-0x00000fff]
+[    1.059202] kernel: pci 0006:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.059697] kernel: pcieport 0002:00:00.0: PME: Signaling with IRQ 227
+[    1.060159] kernel: pcieport 0002:00:00.0: AER: enabled with IRQ 227
+[    1.060607] kernel: pci 0006:01:00.0: [17cb:1103] type 00 class 0x028000
+[    1.060701] kernel: pci 0006:01:00.0: reg 0x10: [mem 0x00000000-0x001fffff 64bit]
+[    1.061280] kernel: pci 0006:01:00.0: PME# supported from D0 D3hot D3cold
+[    1.071706] kernel: pci 0006:00:00.0: BAR 8: assigned [mem 0x30400000-0x305fffff]
+[    1.071717] kernel: pci 0006:00:00.0: BAR 0: assigned [mem 0x30300000-0x30300fff]
+[    1.071724] kernel: pci 0006:01:00.0: BAR 0: assigned [mem 0x30400000-0x305fffff 64bit]
+[    1.071784] kernel: pci 0006:00:00.0: PCI bridge to [bus 01-ff]
+[    1.071789] kernel: pci 0006:00:00.0:   bridge window [mem 0x30400000-0x305fffff]
+[    1.072291] kernel: pcieport 0006:00:00.0: PME: Signaling with IRQ 229
+[    1.072958] kernel: pcieport 0006:00:00.0: AER: enabled with IRQ 229
+[    1.098981] kernel: usb 1-3: new full-speed USB device number 2 using xhci-hcd
+[    1.126976] kernel: msm_dsi ae94000.dsi: [drm:dsi_cmds2buf_tx] *ERROR* wait for video done timed out
+[    1.130473] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.130484] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130487] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk pass-through clock with adjustable parent
+[    1.130489] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    1.130493] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130495] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    1.130501] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    1.130541] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    1.130544] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    1.130548] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130549] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    1.130555] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    1.130558] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    1.130561] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    1.130564] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130566] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    1.130571] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    1.130574] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    1.130576] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    1.130582] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130583] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    1.130585] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    1.130588] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    1.130590] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    1.130593] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130594] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    1.130596] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    1.130656] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    1.130682] kernel: dsi_err_worker: status=4
+[    1.130781] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk, its parent clk: disp0_cc_mdss_pclk0_clk_src, its rate: 14092400, its req_rate:281848000
+[    1.130786] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130788] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk pass-through clock with adjustable parent
+[    1.130789] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk_src, its parent clk: dsi0_phy_pll_out_dsiclk, its rate: 14092400, its req_rate:281848000
+[    1.130792] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130794] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_can_round is TRUE
+[    1.130796] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_determine_round_nolock is error -22
+[    1.130800] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src new rate is 281848000, req.rate is 281848000 and parent is dsi0_phy_pll_out_dsiclk
+[    1.130872] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_intf_clk, its parent clk: disp0_cc_mdss_byte0_div_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.130877] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130879] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_intf_clk pass-through clock with adjustable parent
+[    1.130880] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_div_clk_src, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.130883] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130886] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src clk_core_can_round is TRUE
+[    1.130946] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src new rate is 105693000, req.rate is 105693000 and parent is disp0_cc_mdss_byte0_clk_src
+[    1.130949] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_div_clk_src parent disp0_cc_mdss_byte0_clk_src rate: 105693000
+[    1.130952] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    1.130955] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130956] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    1.130979] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    1.130987] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    1.130990] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    1.130993] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.130995] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    1.131000] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    1.131003] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    1.131005] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    1.131008] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.131010] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    1.131015] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    1.131018] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    1.131021] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    1.131024] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.131025] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    1.131028] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    1.131030] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    1.131033] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    1.131036] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.131038] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    1.131040] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    1.131082] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    1.207278] kernel: msm_dsi ae94000.dsi: [drm:dsi_cmds2buf_tx] *ERROR* wait for video done timed out
+[    1.277200] kernel: input: HID 12d1:10b8 as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.0/0003:12D1:10B8.0001/input/input1
+[    1.277741] kernel: input: HID 12d1:10b8 as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.0/0003:12D1:10B8.0001/input/input2
+[    1.278118] kernel: input: HID 12d1:10b8 Mouse as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.0/0003:12D1:10B8.0001/input/input3
+[    1.278157] kernel: hid-generic 0003:12D1:10B8.0001: input: USB HID v1.11 Mouse [HID 12d1:10b8] on usb-xhci-hcd.0.auto-3/input0
+[    1.284319] kernel: input: HID 12d1:10b8 Keyboard as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input4
+[    1.344218] kernel: input: HID 12d1:10b8 as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input5
+[    1.345093] kernel: input: HID 12d1:10b8 Mouse as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input6
+[    1.345267] kernel: input: HID 12d1:10b8 Touchpad as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input7
+[    1.345315] kernel: hid-generic 0003:12D1:10B8.0002: input: USB HID v1.11 Keyboard [HID 12d1:10b8] on usb-xhci-hcd.0.auto-3/input2
+[    1.411392] kernel: dsi_cmds2buf_tx: cmd dma tx failed, type=0x39, data0=0xb1, len=36, ret=-110
+[    1.411430] kernel: panel-hx83121-ppc357db11-wqxga ae94000.dsi.0: sending command 0xb1 failed: -110
+[    1.411436] kernel: panel-hx83121-ppc357db11-wqxga ae94000.dsi.0: Failed to initialize panel: -110
+[    1.411517] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.411524] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411527] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk pass-through clock with adjustable parent
+[    1.411530] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    1.411534] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411536] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    1.411542] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    1.411589] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    1.411592] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    1.411595] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411598] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    1.411604] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    1.411607] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    1.411610] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    1.411613] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411615] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    1.411620] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    1.411623] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    1.411626] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    1.411629] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411632] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    1.411634] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    1.411637] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    1.411640] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    1.411643] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411645] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    1.411647] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    1.411707] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    1.411836] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk, its parent clk: disp0_cc_mdss_pclk0_clk_src, its rate: 14092400, its req_rate:281848000
+[    1.411840] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411842] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk pass-through clock with adjustable parent
+[    1.411844] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk_src, its parent clk: dsi0_phy_pll_out_dsiclk, its rate: 14092400, its req_rate:281848000
+[    1.411847] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411849] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_can_round is TRUE
+[    1.411851] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_determine_round_nolock is error -22
+[    1.411855] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src new rate is 281848000, req.rate is 281848000 and parent is dsi0_phy_pll_out_dsiclk
+[    1.411925] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_intf_clk, its parent clk: disp0_cc_mdss_byte0_div_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.411930] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411932] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_intf_clk pass-through clock with adjustable parent
+[    1.411935] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_div_clk_src, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    1.411937] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.411939] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src clk_core_can_round is TRUE
+[    1.411999] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src new rate is 105693000, req.rate is 105693000 and parent is disp0_cc_mdss_byte0_clk_src
+[    1.412002] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_div_clk_src parent disp0_cc_mdss_byte0_clk_src rate: 105693000
+[    1.412005] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    1.412008] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.412010] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    1.412015] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    1.412023] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    1.412026] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    1.412028] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.412030] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    1.412036] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    1.412039] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    1.412042] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    1.412045] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.412046] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    1.412052] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    1.412055] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    1.412058] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    1.412061] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.412063] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    1.412065] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    1.412067] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    1.412070] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    1.412072] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    1.412074] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    1.412076] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    1.412118] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    1.459383] kernel: usb 4-1: new SuperSpeed Plus Gen 2x1 USB device number 2 using xhci-hcd
+[    1.487318] kernel: msm_dsi ae94000.dsi: [drm:dsi_cmds2buf_tx] *ERROR* wait for video done timed out
+[    1.488863] kernel: usb-storage 4-1:1.0: USB Mass Storage device detected
+[    1.489640] kernel: usb-storage 4-1:1.0: Quirks match for vid 174c pid 55aa: 400000
+[    1.489860] kernel: scsi host0: usb-storage 4-1:1.0
+[    1.695423] kernel: dsi_cmds2buf_tx: cmd dma tx failed, type=0x39, data0=0x51, len=8, ret=-110
+[    1.695467] kernel: panel-hx83121-ppc357db11-wqxga ae94000.dsi.0: [drm:drm_panel_enable] failed to enable backlight: -110
+[    1.697250] kernel: Console: switching to colour frame buffer device 200x160
+[    1.751425] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[    1.751436] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[    1.785823] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[    1.914860] kernel: qcom-pcie 1c10000.pcie: Phy link never came up
+[    1.916554] kernel: msm_dpu ae01000.display-controller: [drm] fb0: msmdrmfb frame buffer device
+[    1.916801] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    1.918058] kernel: qcom-pcie 1c10000.pcie: PCI host bridge to bus 0004:00
+[    1.975256] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[    1.976002] kernel: pci_bus 0004:00: root bus resource [bus 00-ff]
+[    1.978991] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[    1.980718] kernel: pci_bus 0004:00: root bus resource [io  0x200000-0x2fffff] (bus address [0x0000-0xfffff])
+[    2.031695] kernel: dsi_get_pclk_rate: pixel clock rate now is 281848000
+[    2.033787] kernel: pci_bus 0004:00: root bus resource [mem 0x34300000-0x35ffffff]
+[    2.091255] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[    2.091512] kernel: pci 0004:00:00.0: [17cb:010e] type 01 class 0x060400
+[    2.094656] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[    2.097739] kernel: pci 0004:00:00.0: reg 0x10: [mem 0x00000000-0x00000fff]
+[    2.123234] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[    2.124083] kernel: pci 0004:00:00.0: PME# supported from D0 D3hot D3cold
+[    2.323187] kernel: pci 0004:00:00.0: BAR 0: assigned [mem 0x34300000-0x34300fff]
+[    2.326425] kernel: pci 0004:00:00.0: PCI bridge to [bus 01-ff]
+[    2.330461] kernel: pcieport 0004:00:00.0: PME: Signaling with IRQ 231
+[    2.334682] kernel: pcieport 0004:00:00.0: AER: enabled with IRQ 231
+[    2.339504] kernel: nvme nvme0: pci function 0002:01:00.0
+[    2.341209] kernel: nvme 0002:01:00.0: enabling device (0000 -> 0002)
+[    2.345324] kernel: nvme nvme0: missing or invalid SUBNQN field.
+[    2.348853] kernel: nvme nvme0: 8/0/0 default/read/poll queues
+[    2.354272] kernel:  nvme0n1: p1 p2 p3 p4 p5 p6 p7
+[    2.501261] kernel: scsi 0:0:0:0: Direct-Access     aigo SSD  S500E 120GB     0    PQ: 0 ANSI: 6
+[    2.503531] kernel: sd 0:0:0:0: [sda] 234441648 512-byte logical blocks: (120 GB/112 GiB)
+[    2.503835] kernel: sd 0:0:0:0: [sda] Write Protect is off
+[    2.503837] kernel: sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[    2.504153] kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.509418] kernel: GPT:Primary header thinks Alt. header is not at the end of the disk.
+[    2.509421] kernel: GPT:10330111 != 234441647
+[    2.509422] kernel: GPT:Alternate GPT header not at the end of the disk.
+[    2.509423] kernel: GPT:10330111 != 234441647
+[    2.509424] kernel: GPT: Use GNU Parted to correct GPT errors.
+[    2.509430] kernel:  sda: sda1 sda2
+[    2.509539] kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.559796] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[    2.559799] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[    2.591466] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[    2.900537] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[    2.900557] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[    2.930969] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[    3.286443] kernel: EXT4-fs (sda2): mounted filesystem f9c93be3-aa69-4df7-a700-9331aebc0809 ro with writeback data mode. Quota mode: none.
+[    3.438079] kernel: EXT4-fs (sda2): unmounting filesystem f9c93be3-aa69-4df7-a700-9331aebc0809.
+[    4.037873] kernel:  sda: sda1 sda2
+[    4.050194] kernel:  sda: sda1 sda2
+[    4.492150] kernel: EXT4-fs (sda2): mounted filesystem f9c93be3-aa69-4df7-a700-9331aebc0809 ro with writeback data mode. Quota mode: none.
+[    5.330769] systemd[1]: System time before build time, advancing clock.
+[    5.370415] kernel: NET: Registered PF_INET6 protocol family
+[    5.372100] kernel: Segment Routing with IPv6
+[    5.372121] kernel: In-situ OAM (IOAM) with IPv6
+[    5.420226] systemd[1]: systemd 249.11-0ubuntu3.10 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    5.420441] systemd[1]: Detected architecture arm64.
+[    5.425177] systemd[1]: Detected first boot.
+[    5.425684] systemd[1]: Hostname set to <matebook-e-go>.
+[    5.429737] systemd[1]: Initializing machine ID from random generator.
+[    5.731428] kernel: block sda: the capability attribute has been deprecated.
+[    6.840394] systemd[1]: Failed to populate /etc with preset unit settings, ignoring: Read-only file system
+[    7.029501] systemd[1]: Queued start job for default target Graphical Interface.
+[    7.053362] systemd[1]: Created slice Slice /system/modprobe.
+[    7.054045] systemd[1]: Created slice Slice /system/systemd-fsck.
+[    7.054391] systemd[1]: Created slice User and Session Slice.
+[    7.054532] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    7.054643] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    7.054767] systemd[1]: Reached target User and Group Name Lookups.
+[    7.054811] systemd[1]: Reached target Slice Units.
+[    7.054850] systemd[1]: Reached target Swaps.
+[    7.054882] systemd[1]: Reached target System Time Set.
+[    7.054997] systemd[1]: Reached target Local Verity Protected Volumes.
+[    7.070755] systemd[1]: Listening on RPCbind Server Activation Socket.
+[    7.071081] systemd[1]: Listening on Syslog Socket.
+[    7.071264] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    7.071363] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    7.071685] systemd[1]: Listening on Journal Audit Socket.
+[    7.071825] systemd[1]: Listening on Journal Socket (/dev/log).
+[    7.072016] systemd[1]: Listening on Journal Socket.
+[    7.072226] systemd[1]: Listening on udev Control Socket.
+[    7.072372] systemd[1]: Listening on udev Kernel Socket.
+[    7.073826] systemd[1]: Mounting Huge Pages File System...
+[    7.075361] systemd[1]: Mounting POSIX Message Queue File System...
+[    7.077297] systemd[1]: Mounting Kernel Debug File System...
+[    7.077388] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+[    7.077512] systemd[1]: Condition check resulted in Kernel Module supporting RPCSEC_GSS being skipped.
+[    7.081921] systemd[1]: Starting Restore / save the current clock...
+[    7.082738] systemd[1]: Starting Set the console keyboard layout...
+[    7.084167] systemd[1]: Starting Create List of Static Device Nodes...
+[    7.087596] systemd[1]: Starting Load Kernel Module configfs...
+[    7.088541] systemd[1]: Starting Load Kernel Module drm...
+[    7.090319] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    7.091501] systemd[1]: Starting Load Kernel Module fuse...
+[    7.091652] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    7.096680] systemd[1]: Starting Load Kernel Modules...
+[    7.097904] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    7.099192] systemd[1]: Starting Coldplug All udev Devices...
+[    7.101141] systemd[1]: Mounted Huge Pages File System.
+[    7.101241] systemd[1]: Mounted POSIX Message Queue File System.
+[    7.101312] systemd[1]: Mounted Kernel Debug File System.
+[    7.102569] systemd[1]: Finished Create List of Static Device Nodes.
+[    7.103493] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    7.103664] systemd[1]: Finished Load Kernel Module configfs.
+[    7.103854] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    7.104027] systemd[1]: Finished Load Kernel Module drm.
+[    7.104390] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    7.104695] systemd[1]: Finished Load Kernel Module efi_pstore.
+[    7.104902] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    7.105085] systemd[1]: Finished Load Kernel Module fuse.
+[    7.105256] systemd[1]: Condition check resulted in FUSE Control File System being skipped.
+[    7.107537] systemd[1]: Mounting Kernel Configuration File System...
+[    7.110119] systemd[1]: Finished Restore / save the current clock.
+[    7.111249] systemd[1]: Finished Load Kernel Modules.
+[    7.112156] systemd[1]: Mounted Kernel Configuration File System.
+[    7.114083] systemd[1]: Starting Apply Kernel Variables...
+[    7.121145] kernel: EXT4-fs (sda2): re-mounted f9c93be3-aa69-4df7-a700-9331aebc0809 r/w. Quota mode: none.
+[    7.124910] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    7.125043] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    7.126095] systemd[1]: Starting Load/Save Random Seed...
+[    7.129554] systemd[1]: Starting Create System Users...
+[    7.199641] systemd[1]: Finished Create System Users.
+[    7.220489] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    7.221001] systemd[1]: Finished Set the console keyboard layout.
+[    7.222332] systemd[1]: Finished Apply Kernel Variables.
+[    7.222629] systemd[1]: Finished Load/Save Random Seed.
+[    7.222733] systemd[1]: Reached target First Boot Complete.
+[    7.243864] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    7.244062] systemd[1]: Reached target Preparation for Local File Systems.
+[    7.245237] systemd[1]: Mounting /tmp...
+[    7.246610] systemd[1]: Starting Rule-based Manager for Device Events and Files...
+[    7.247249] systemd[1]: Mounted /tmp.
+[    7.300651] systemd[1]: Finished Coldplug All udev Devices.
+[    7.332059] systemd[1]: Starting Helper to synchronize boot up for ifupdown...
+[    7.346258] systemd[1]: Finished Helper to synchronize boot up for ifupdown.
+[    7.352313] systemd[1]: Started Rule-based Manager for Device Events and Files.
+[    7.353331] systemd[1]: Starting Show Plymouth Boot Screen...
+[    7.394077] systemd[1]: Started Show Plymouth Boot Screen.
+[    7.394214] systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch when bootsplash is active being skipped.
+[    7.394334] systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    7.394352] systemd[1]: Reached target Local Encrypted Volumes.
+[    7.444543] systemd[1]: Created slice Slice /system/systemd-backlight.
+[    7.448833] kernel: qcom,fastrpc 1b300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[    7.448962] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 9
+[    7.449300] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 10
+[    7.450152] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 11
+[    7.450465] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 12
+[    7.453535] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 13
+[    7.453836] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 14
+[    7.454239] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 15
+[    7.454503] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 16
+[    7.455212] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@9: Adding to iommu group 17
+[    7.455532] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@10: Adding to iommu group 17
+[    7.456009] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@11: Adding to iommu group 18
+[    7.456383] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@12: Adding to iommu group 19
+[    7.457023] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@13: Adding to iommu group 20
+[    7.457278] kernel: qcom,fastrpc-cb 1b300000.remoteproc:glink-edge:fastrpc:compute-cb@14: Adding to iommu group 21
+[    7.476841] systemd[1]: Starting Load/Save Screen Backlight Brightness of backlight:ae94000.dsi.0...
+[    7.484894] kernel: rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: registered as rtc0
+[    7.484925] kernel: rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: setting system clock to 1970-04-23T09:32:28 UTC (9711148)
+[    7.507046] kernel: input: pmic_pwrkey as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1300/c440000.spmi:pmic@0:pon@1300:pwrkey/input/input8
+[    7.507525] kernel: input: pmic_resin as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1300/c440000.spmi:pmic@0:pon@1300:resin/input/input9
+[    7.535625] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    7.535630] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535632] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk pass-through clock with adjustable parent
+[    7.535633] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    7.535635] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535635] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    7.535638] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    7.535650] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    7.535651] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    7.535652] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535653] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    7.535655] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    7.535656] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    7.535657] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    7.535658] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535659] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    7.535661] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    7.535662] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    7.535663] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    7.535664] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535665] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    7.535666] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    7.535667] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    7.535668] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    7.535669] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535670] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    7.535671] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    7.535710] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    7.535807] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk, its parent clk: disp0_cc_mdss_pclk0_clk_src, its rate: 14092400, its req_rate:281848000
+[    7.535808] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535809] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk pass-through clock with adjustable parent
+[    7.535809] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_pclk0_clk_src, its parent clk: dsi0_phy_pll_out_dsiclk, its rate: 14092400, its req_rate:281848000
+[    7.535810] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535811] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_can_round is TRUE
+[    7.535812] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src clk_core_determine_round_nolock is error -22
+[    7.535813] kernel: clk_calc_new_rates: disp0_cc_mdss_pclk0_clk_src new rate is 281848000, req.rate is 281848000 and parent is dsi0_phy_pll_out_dsiclk
+[    7.535839] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_intf_clk, its parent clk: disp0_cc_mdss_byte0_div_clk_src, its rate: 105692996, its req_rate:105693000
+[    7.535840] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535841] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_intf_clk pass-through clock with adjustable parent
+[    7.535841] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_div_clk_src, its parent clk: disp0_cc_mdss_byte0_clk_src, its rate: 105692996, its req_rate:105693000
+[    7.535842] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535843] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src clk_core_can_round is TRUE
+[    7.535864] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_div_clk_src new rate is 105693000, req.rate is 105693000 and parent is disp0_cc_mdss_byte0_clk_src
+[    7.535865] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_div_clk_src parent disp0_cc_mdss_byte0_clk_src rate: 105693000
+[    7.535866] kernel: clk_calc_new_rates: now calc clk: disp0_cc_mdss_byte0_clk_src, its parent clk: dsi0_phy_pll_out_byteclk, its rate: 105692996, its req_rate:105693000
+[    7.535867] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535867] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src clk_core_can_round is TRUE
+[    7.535869] kernel: clk_calc_new_rates: disp0_cc_mdss_byte0_clk_src new rate is 105693000, req.rate is 105693000 and parent is dsi0_phy_pll_out_byteclk
+[    7.535871] kernel: clk_calc_new_rates: set disp0_cc_mdss_byte0_clk_src parent dsi0_phy_pll_out_byteclk rate: 105693000
+[    7.535872] kernel: clk_calc_new_rates: now calc clk: dsi0_phy_pll_out_byteclk, its parent clk: dsi0_pll_bit_clk, its rate: 105692996, its req_rate:105693000
+[    7.535873] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535873] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk clk_core_can_round is TRUE
+[    7.535875] kernel: clk_calc_new_rates: dsi0_phy_pll_out_byteclk new rate is 105693000, req.rate is 105693000 and parent is dsi0_pll_bit_clk
+[    7.535876] kernel: clk_calc_new_rates: set dsi0_phy_pll_out_byteclk parent dsi0_pll_bit_clk rate: 739851000
+[    7.535877] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_bit_clk, its parent clk: dsi0_pll_out_div_clk, its rate: 739850976, its req_rate:739851000
+[    7.535878] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535879] kernel: clk_calc_new_rates: dsi0_pll_bit_clk clk_core_can_round is TRUE
+[    7.535880] kernel: clk_calc_new_rates: dsi0_pll_bit_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0_pll_out_div_clk
+[    7.535881] kernel: clk_calc_new_rates: set dsi0_pll_bit_clk parent dsi0_pll_out_div_clk rate: 739851000
+[    7.535882] kernel: clk_calc_new_rates: now calc clk: dsi0_pll_out_div_clk, its parent clk: dsi0vco_clk, its rate: 739850976, its req_rate:739851000
+[    7.535883] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535884] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk clk_core_can_round is TRUE
+[    7.535884] kernel: clk_calc_new_rates: dsi0_pll_out_div_clk new rate is 739851000, req.rate is 739851000 and parent is dsi0vco_clk
+[    7.535885] kernel: clk_calc_new_rates: set dsi0_pll_out_div_clk parent dsi0vco_clk rate: 739851000
+[    7.535886] kernel: clk_calc_new_rates: now calc clk: dsi0vco_clk, its parent clk: bi_tcxo, its rate: 739850976, its req_rate:739851000
+[    7.535887] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.535887] kernel: clk_calc_new_rates: dsi0vco_clk clk_core_can_round is TRUE
+[    7.535888] kernel: clk_calc_new_rates: dsi0vco_clk new rate is 739851000, req.rate is 739851000 and parent is bi_tcxo
+[    7.535919] kernel: dsi_pll_7nm_vco_set_rate:DSI PLL0 rate=739851000, parent's=19200000
+[    7.544408] kernel: mc: Linux media interface: v0.10
+[    7.610976] kernel: msm_dsi ae94000.dsi: [drm:dsi_cmds2buf_tx] *ERROR* wait for video done timed out
+[    7.630270] systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[    7.635812] kernel: Bluetooth: Core ver 2.22
+[    7.635827] kernel: NET: Registered PF_BLUETOOTH protocol family
+[    7.635829] kernel: Bluetooth: HCI device and connection manager initialized
+[    7.635833] kernel: Bluetooth: HCI socket layer initialized
+[    7.635835] kernel: Bluetooth: L2CAP socket layer initialized
+[    7.635837] kernel: Bluetooth: SCO socket layer initialized
+[    7.700181] kernel: Bluetooth: HCI UART driver ver 2.3
+[    7.700185] kernel: Bluetooth: HCI UART protocol H4 registered
+[    7.700205] kernel: Bluetooth: HCI UART protocol QCA registered
+[    7.700850] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk, its parent clk: gcc_qupv3_wrap0_s2_clk_src, its rate: 19200000, its req_rate:7372800
+[    7.700854] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.700855] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk pass-through clock with adjustable parent
+[    7.700857] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:7372800
+[    7.700858] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.700859] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src clk_core_can_round is TRUE
+[    7.700860] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src new rate is 7372800, req.rate is 7372800 and parent is gcc_gpll0_out_even
+[    7.713908] kernel: videodev: Linux video capture interface: v2.00
+[    7.822969] kernel: dsi_cmds2buf_tx: cmd dma tx failed, type=0x37, data0=0x2, len=4, ret=-110
+[    7.822975] kernel: msm_dsi_host_cmd_rx: Set max pkt size failed, -110
+[    7.823725] systemd[1]: systemd-backlight@backlight:ae94000.dsi.0.service: Main process exited, code=exited, status=1/FAILURE
+[    7.823861] systemd[1]: systemd-backlight@backlight:ae94000.dsi.0.service: Failed with result 'exit-code'.
+[    7.824141] systemd[1]: Failed to start Load/Save Screen Backlight Brightness of backlight:ae94000.dsi.0.
+[    7.837623] systemd[1]: Found device aigo_SSD_S500E_120GB ARMBI_EFI.
+[    7.844809] kernel: Bluetooth: hci0: setting up wcn6855
+[    7.867805] systemd[1]: Starting File System Check on /dev/disk/by-uuid/8EA9-5C9F...
+[    7.870736] systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch when bootsplash is active being skipped.
+[    7.870765] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    7.870869] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+[    7.872275] systemd[1]: Starting Load Kernel Module efi_pstore...
+[    7.872338] kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    7.873138] systemd[1]: Starting Load Kernel Module fuse...
+[    7.873502] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    7.874394] systemd[1]: Starting Load/Save RF Kill Switch Status...
+[    7.875512] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    7.875698] systemd[1]: Finished Load Kernel Module efi_pstore.
+[    7.876038] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    7.876072] kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    7.876231] systemd[1]: Finished Load Kernel Module fuse.
+[    7.876391] systemd[1]: Condition check resulted in FUSE Control File System being skipped.
+[    7.876408] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    7.887470] systemd[1]: Started File System Check Daemon to report status.
+[    7.887759] systemd[1]: Started Load/Save RF Kill Switch Status.
+[    7.906654] kernel: input: HID 12d1:10b8 Keyboard as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input10
+[    7.915987] kernel: Bluetooth: hci0: Frame reassembly failed (-84)
+[    7.925465] kernel: qcom-venus aa00000.video-codec: Adding to iommu group 22
+[    7.925839] kernel: qcom-venus aa00000.video-codec: non legacy binding
+[    7.927468] kernel: clk_calc_new_rates: now calc clk: video_cc_mvs0c_clk, its parent clk: video_cc_mvs0c_div2_div_clk_src, its rate: 9600000, its req_rate:240000000
+[    7.927633] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.927638] kernel: clk_calc_new_rates: video_cc_mvs0c_clk pass-through clock with adjustable parent
+[    7.927655] kernel: clk_calc_new_rates: now calc clk: video_cc_mvs0c_div2_div_clk_src, its parent clk: video_cc_mvs0_clk_src, its rate: 9600000, its req_rate:240000000
+[    7.927677] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.927678] kernel: clk_calc_new_rates: video_cc_mvs0c_div2_div_clk_src clk_core_can_round is TRUE
+[    7.927701] kernel: clk_calc_new_rates: video_cc_mvs0c_div2_div_clk_src new rate is 360000000, req.rate is 360000000 and parent is video_cc_mvs0_clk_src
+[    7.927712] kernel: clk_calc_new_rates: set video_cc_mvs0c_div2_div_clk_src parent video_cc_mvs0_clk_src rate: 720000000
+[    7.927714] kernel: clk_calc_new_rates: now calc clk: video_cc_mvs0_clk_src, its parent clk: bi_tcxo, its rate: 19200000, its req_rate:720000000
+[    7.927723] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.927724] kernel: clk_calc_new_rates: video_cc_mvs0_clk_src clk_core_can_round is TRUE
+[    7.927725] kernel: clk_calc_new_rates: video_cc_mvs0_clk_src new rate is 720000000, req.rate is 720000000 and parent is video_pll0
+[    7.963573] kernel: input: HID 12d1:10b8 UNKNOWN as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input11
+[    7.963906] kernel: input: HID 12d1:10b8 Mouse as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input12
+[    7.964220] kernel: input: HID 12d1:10b8 Touchpad as /devices/platform/soc@0/a4f8800.usb/a400000.usb/xhci-hcd.0.auto/usb1/1-3/1-3:1.2/0003:12D1:10B8.0002/input/input13
+[    7.964559] kernel: hid-multitouch 0003:12D1:10B8.0002: input: USB HID v1.11 Keyboard [HID 12d1:10b8] on usb-xhci-hcd.0.auto-3/input2
+[    7.966759] kernel: ath11k_pci 0006:01:00.0: BAR 0: assigned [mem 0x30400000-0x305fffff 64bit]
+[    7.966877] kernel: ath11k_pci 0006:01:00.0: enabling device (0000 -> 0002)
+[    7.968721] kernel: ath11k_pci 0006:01:00.0: MSI vectors: 32
+[    7.968753] kernel: ath11k_pci 0006:01:00.0: wcn6855 hw2.1
+[    7.975784] kernel: Bluetooth: hci0: QCA Product ID   :0x00000013
+[    7.975787] kernel: Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[    7.975789] kernel: Bluetooth: hci0: QCA ROM Version  :0x00000201
+[    7.975791] kernel: Bluetooth: hci0: QCA Patch Version:0x000038e6
+[    7.984278] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk, its parent clk: gcc_qupv3_wrap0_s2_clk_src, its rate: 7372800, its req_rate:100000000
+[    7.984294] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.984296] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk pass-through clock with adjustable parent
+[    7.984297] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk_src, its parent clk: gcc_gpll0_out_even, its rate: 7372800, its req_rate:100000000
+[    7.984299] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[    7.984301] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src clk_core_can_round is TRUE
+[    7.984303] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src new rate is 100000000, req.rate is 100000000 and parent is gcc_gpll0
+[    7.985903] kernel: Bluetooth: hci0: QCA controller version 0x12110201
+[    7.985910] kernel: Bluetooth: hci0: QCA Downloading qca/hpbtfw21.tlv
+[    8.255919] kernel: mhi mhi0: Requested to power ON
+[    8.255937] kernel: mhi mhi0: Power on setup success
+[    8.260099] systemd[1]: Finished File System Check on /dev/disk/by-uuid/8EA9-5C9F.
+[    8.317858] systemd[1]: Mounting /boot/efi...
+[    8.427690] systemd[1]: Mounted /boot/efi.
+[    8.427893] systemd[1]: Reached target Local File Systems.
+[    8.455541] systemd[1]: Starting Armbian ZRAM config...
+[    8.456735] systemd[1]: Starting Set console font and keymap...
+[    8.457547] systemd[1]: Starting Raise network interfaces...
+[    8.458457] systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+[    8.458497] systemd[1]: Condition check resulted in RPC security service for NFS server being skipped.
+[    8.478026] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    8.478063] systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+[    8.479357] systemd[1]: Starting Commit a transient machine-id on disk...
+[    8.479709] systemd[1]: Received SIGRTMIN+20 from PID 287 (plymouthd).
+[    8.480997] systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+[    8.527209] kernel: mhi mhi0: Wait for device to enter SBL or Mission mode
+[    8.864253] systemd[1]: etc-machine\x2did.mount: Deactivated successfully.
+[    8.865817] systemd[1]: Finished Commit a transient machine-id on disk.
+[    8.876242] kernel: Bluetooth: hci0: qca_generate_nvm_name: nvm name is qca/hpnv21g.bin
+[    8.876246] kernel: Bluetooth: hci0: QCA Downloading qca/hpnv21g.bin
+[    8.958126] systemd[1]: armbian-zram-config.service: Main process exited, code=exited, status=1/FAILURE
+[    8.958270] systemd[1]: armbian-zram-config.service: Failed with result 'exit-code'.
+[    8.958870] systemd[1]: Failed to start Armbian ZRAM config.
+[    8.999859] systemd[1]: Starting Armbian memory supported logging...
+[    9.008617] systemd[1]: Finished Armbian memory supported logging.
+[    9.012075] systemd[1]: Starting Journal Service...
+[    9.049313] systemd[1]: Finished Raise network interfaces.
+[    9.070233] systemd[1]: Started Journal Service.
+[    9.076697] kernel: Bluetooth: hci0: QCA setup on UART is completed
+[    9.188397] kernel: ath11k_pci 0006:01:00.0: chip_id 0x12 chip_family 0xb board_id 0xff soc_id 0x400c1211
+[    9.188403] kernel: ath11k_pci 0006:01:00.0: fw_version 0x110b196e fw_build_timestamp 2022-12-22 12:54 fw_build_id WLAN.HSP.1.1-03125-QCAHSPSWPL_V1_V2_SILICONZ_LITE-3.6510.23
+[    9.655567] kernel: EXT4-fs (sda2): resizing filesystem from 1224699 to 29238641 blocks
+[    9.897476] kernel: ath11k_pci 0006:01:00.0 wlP6p1s0: renamed from wlan0
+[   13.831359] kernel: EXT4-fs (sda2): resized filesystem to 29238641
+[   14.786907] kernel: memfd_create() without MFD_EXEC nor MFD_NOEXEC_SEAL, pid=1 'systemd'
+[   15.911607] kernel: Bluetooth: MGMT ver 1.22
+[   15.912776] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk, its parent clk: gcc_qupv3_wrap0_s2_clk_src, its rate: 100000000, its req_rate:7372800
+[   15.912808] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[   15.912815] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk pass-through clock with adjustable parent
+[   15.912823] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk_src, its parent clk: gcc_gpll0, its rate: 100000000, its req_rate:7372800
+[   15.912829] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[   15.912833] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src clk_core_can_round is TRUE
+[   15.912841] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src new rate is 7372800, req.rate is 7372800 and parent is gcc_gpll0_out_even
+[   15.912981] kernel: Bluetooth: hci0: setting up wcn6855
+[   16.044183] kernel: Bluetooth: hci0: QCA Product ID   :0x00000013
+[   16.044188] kernel: Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[   16.044189] kernel: Bluetooth: hci0: QCA ROM Version  :0x00000201
+[   16.044190] kernel: Bluetooth: hci0: QCA Patch Version:0x000038e6
+[   16.055739] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk, its parent clk: gcc_qupv3_wrap0_s2_clk_src, its rate: 7372800, its req_rate:100000000
+[   16.055743] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[   16.055745] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk pass-through clock with adjustable parent
+[   16.055746] kernel: clk_calc_new_rates: now calc clk: gcc_qupv3_wrap0_s2_clk_src, its parent clk: gcc_gpll0_out_even, its rate: 7372800, its req_rate:100000000
+[   16.055748] kernel: clk_calc_new_rates: pixel clock from 0 to 18446744073709551615
+[   16.055749] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src clk_core_can_round is TRUE
+[   16.055750] kernel: clk_calc_new_rates: gcc_qupv3_wrap0_s2_clk_src new rate is 100000000, req.rate is 100000000 and parent is gcc_gpll0
+[   16.056122] kernel: Bluetooth: hci0: QCA controller version 0x12110201
+[   16.056140] kernel: Bluetooth: hci0: QCA Downloading qca/hpbtfw21.tlv
+[   16.116159] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.116163] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.148223] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[   16.174969] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.174974] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.232412] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.232417] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.263030] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[   16.287045] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.287064] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.347025] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.347066] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.467119] kernel: [drm:dpu_encoder_phys_vid_wait_for_commit_done:488] [dpu error]vblank timeout
+[   16.467125] kernel: [drm:dpu_kms_wait_for_commit_done:494] [dpu error]wait for commit done returned -110
+[   16.498964] kernel: [drm:dpu_encoder_frame_done_timeout:2360] [dpu error]enc31 frame done timeout
+[   16.740859] kernel: Bluetooth: hci0: qca_generate_nvm_name: nvm name is qca/hpnv21g.bin
+[   16.740920] kernel: Bluetooth: hci0: QCA Downloading qca/hpnv21g.bin
+[   16.936326] kernel: Bluetooth: hci0: QCA setup on UART is completed
+[   17.033416] kernel: NET: Registered PF_ALG protocol family
