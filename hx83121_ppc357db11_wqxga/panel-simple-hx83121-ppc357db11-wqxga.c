@@ -13,6 +13,7 @@ static const struct drm_display_mode hx83121_ppc357db11_wqxga_mode = {
 	.vtotal = 2560 + 60 + 4 + 18,
 	.width_mm = 166,
 	.height_mm = 266,
+	.type = DRM_MODE_TYPE_DRIVER,
 };
 
 static const struct panel_desc_dsi hx83121_ppc357db11_wqxga = {

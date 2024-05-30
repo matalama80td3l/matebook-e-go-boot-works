@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only
-// Copyright (c) 2023 FIXME
+// Copyright (c) 2024 FIXME
 // Generated with linux-mdss-dsi-panel-driver-generator from vendor device tree:
 //   Copyright (c) 2013, The Linux Foundation. All rights reserved. (FIXME)
 
@@ -11,15 +11,18 @@
 
 #include <video/mipi_display.h>
 
+#include <drm/display/drm_dsc.h>
+#include <drm/display/drm_dsc_helper.h>
 #include <drm/drm_mipi_dsi.h>
 #include <drm/drm_modes.h>
 #include <drm/drm_panel.h>
+#include <drm/drm_probe_helper.h>
 
 struct hx83121_ppc357db11_wqxga {
 	struct drm_panel panel;
 	struct mipi_dsi_device *dsi;
+	struct drm_dsc_config dsc;
 	struct gpio_desc *reset_gpio;
-	bool prepared;
 };
 
 static inline
@@ -221,10 +224,8 @@ static int hx83121_ppc357db11_wqxga_prepare(struct drm_panel *panel)
 {
 	struct hx83121_ppc357db11_wqxga *ctx = to_hx83121_ppc357db11_wqxga(panel);
 	struct device *dev = &ctx->dsi->dev;
+	struct drm_dsc_picture_parameter_set pps;
 	int ret;
-
-	if (ctx->prepared)
-		return 0;
 
 	hx83121_ppc357db11_wqxga_reset(ctx);
 
@@ -235,7 +236,22 @@ static int hx83121_ppc357db11_wqxga_prepare(struct drm_panel *panel)
 		return ret;
 	}
 
-	ctx->prepared = true;
+	drm_dsc_pps_payload_pack(&pps, &ctx->dsc);
+
+	ret = mipi_dsi_picture_parameter_set(ctx->dsi, &pps);
+	if (ret < 0) {
+		dev_err(panel->dev, "failed to transmit PPS: %d\n", ret);
+		return ret;
+	}
+
+	ret = mipi_dsi_compression_mode(ctx->dsi, true);
+	if (ret < 0) {
+		dev_err(dev, "failed to enable compression mode: %d\n", ret);
+		return ret;
+	}
+
+	msleep(28); /* TODO: Is this panel-dependent? */
+
 	return 0;
 }
 
@@ -245,16 +261,12 @@ static int hx83121_ppc357db11_wqxga_unprepare(struct drm_panel *panel)
 	struct device *dev = &ctx->dsi->dev;
 	int ret;
 
-	if (!ctx->prepared)
-		return 0;
-
 	ret = hx83121_ppc357db11_wqxga_off(ctx);
 	if (ret < 0)
 		dev_err(dev, "Failed to un-initialize panel: %d\n", ret);
 
 	gpiod_set_value_cansleep(ctx->reset_gpio, 1);
 
-	ctx->prepared = false;
 	return 0;
 }
 
@@ -270,25 +282,13 @@ static const struct drm_display_mode hx83121_ppc357db11_wqxga_mode = {
 	.vtotal = 2560 + 60 + 4 + 18,
 	.width_mm = 166,
 	.height_mm = 266,
+	.type = DRM_MODE_TYPE_DRIVER,
 };
 
 static int hx83121_ppc357db11_wqxga_get_modes(struct drm_panel *panel,
 					      struct drm_connector *connector)
 {
-	struct drm_display_mode *mode;
-
-	mode = drm_mode_duplicate(connector->dev, &hx83121_ppc357db11_wqxga_mode);
-	if (!mode)
-		return -ENOMEM;
-
-	drm_mode_set_name(mode);
-
-	mode->type = DRM_MODE_TYPE_DRIVER | DRM_MODE_TYPE_PREFERRED;
-	connector->display_info.width_mm = mode->width_mm;
-	connector->display_info.height_mm = mode->height_mm;
-	drm_mode_probed_add(connector, mode);
-
-	return 1;
+	return drm_connector_helper_get_modes_fixed(connector, &hx83121_ppc357db11_wqxga_mode);
 }
 
 static const struct drm_panel_funcs hx83121_ppc357db11_wqxga_panel_funcs = {
@@ -385,11 +385,29 @@ static int hx83121_ppc357db11_wqxga_probe(struct mipi_dsi_device *dsi)
 
 	drm_panel_add(&ctx->panel);
 
+	/* This panel only supports DSC; unconditionally enable it */
+	dsi->dsc = &ctx->dsc;
+
+	ctx->dsc.dsc_version_major = 1;
+	ctx->dsc.dsc_version_minor = 1;
+
+	/* TODO: Pass slice_per_pkt = 1 */
+	ctx->dsc.slice_height = 40;
+	ctx->dsc.slice_width = 1600;
+	/*
+	 * TODO: hdisplay should be read from the selected mode once
+	 * it is passed back to drm_panel (in prepare?)
+	 */
+	WARN_ON(1600 % ctx->dsc.slice_width);
+	ctx->dsc.slice_count = 1600 / ctx->dsc.slice_width;
+	ctx->dsc.bits_per_component = 8;
+	ctx->dsc.bits_per_pixel = 8 << 4; /* 4 fractional bits */
+	ctx->dsc.block_pred_enable = true;
+
 	ret = mipi_dsi_attach(dsi);
 	if (ret < 0) {
-		dev_err(dev, "Failed to attach to DSI host: %d\n", ret);
 		drm_panel_remove(&ctx->panel);
-		return ret;
+		return dev_err_probe(dev, ret, "Failed to attach to DSI host\n");
 	}
 
 	return 0;

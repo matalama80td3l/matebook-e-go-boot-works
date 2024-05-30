@@ -3,7 +3,7 @@
 		compatible = "mdss,hx83121-ppc357db11-wqxga";
 		reg = <0>;
 
-		reset-gpios = <&msmgpio XY GPIO_ACTIVE_LOW>;
+		reset-gpios = <&tlmm XY GPIO_ACTIVE_LOW>;
 
 		port {
 			panel_in: endpoint {
