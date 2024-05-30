@@ -29,6 +29,21 @@
 		i2c21 = &i2c21;	
 		spi6 = &spi6;			
 	};
+
+	chosen {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		ranges;
+
+		framebuffer0: framebuffer@c6200000 {
+			compatible = "simple-framebuffer";
+			reg = <0x0 0xC6200000 0x0 0x02400000>;
+			width = <1600>;
+			height = <2560>;
+			stride = <(1600 * 4)>;
+			format = "a8r8g8b8";
+		};
+	};
 	
 	wcd938x: audio-codec {
 		compatible = "qcom,wcd9380-codec";
@@ -557,33 +572,35 @@
 	};
 };
 
-&mdss_dsi0 {
-	status = "okay";
+// &mdss_dsi0 {
+// 	status = "okay";
+// 	vdda-supply = <&vreg_l3b>;
 	
-	panel@0 {
-		compatible = "mdss,hx83121-ppc357db11-wqxga";
-		reg = <0>;
+// 	panel@0 {
+// 		compatible = "mdss,hx83121-ppc357db11-wqxga";
+// 		reg = <0>;
 
-		reset-gpios = <&tlmm 38 GPIO_ACTIVE_LOW>;
-		status = "okay";
+// 		reset-gpios = <&tlmm 38 GPIO_ACTIVE_LOW>;
+// 		status = "okay";
 
-		port {
-			panel_in: endpoint {
-				remote-endpoint = <&mdss_dsi0_out>;
-			};
-		};
-	};
-};
+// 		port {
+// 			panel_in: endpoint {
+// 				remote-endpoint = <&mdss_dsi0_out>;
+// 			};
+// 		};
+// 	};
+// };
 
-&mdss_dsi0_out {
-	data-lanes = <0 1 2 3>;
-	remote-endpoint = <&panel_in>;
-};
+// &mdss_dsi0_out {
+// 	data-lanes = <0 1 2 3>;
+// 	remote-endpoint = <&panel_in>;
+// };
 
-&mdss_dsi0_phy {
-	phy-type = <PHY_TYPE_CPHY>;
-	status = "okay";
-};
+// &mdss_dsi0_phy {
+// 	// phy-type = <PHY_TYPE_CPHY>;
+// 	vdds-supply = <&vreg_l6b>;
+// 	status = "okay";
+// };
 
 &mdss0 {
 	status = "okay";
@@ -608,7 +625,7 @@
 };
 
 &i2c4 {
-	clock-frequency = <400000>;
+	clock-frequency = <1000000>;
 
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c4_default>;
@@ -1093,7 +1110,7 @@
 &usb_0_qmpphy {
 	vdda-phy-supply = <&vreg_l9d>;
 	vdda-pll-supply = <&vreg_l4d>;
-
+	orientation-switch;
 
 	status = "okay";
 };
@@ -1172,10 +1189,14 @@
 };
 
 &usb_2_qmpphy0 {
+	vdda-phy-supply = <&vreg_l1b>;
+	vdda-pll-supply = <&vreg_l4d>;
 	status = "okay";
 };
 
 &usb_2_qmpphy1 {
+	vdda-phy-supply = <&vreg_l8d>;
+	vdda-pll-supply = <&vreg_l4d>;
 	status = "okay";
 };
 
